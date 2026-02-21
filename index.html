@@ -168,6 +168,7 @@
         <a href="#levels" class="nav__link">Detox Levels</a>
         <a href="#nervous-system" class="nav__link">Islands</a>
         <a href="#protocol" class="nav__link">Protocol</a>
+        <a href="#quiz" class="nav__link">Find Your Island</a>
         <a href="#no-influencer" class="nav__link">No-Influencer List</a>
         <a href="#faq" class="nav__link">FAQ</a>
         <a href="coming-soon.html" class="btn btn--primary btn--sm nav__cta">Start Your Detox</a>
@@ -185,6 +186,7 @@
       <a href="#levels" class="nav__mobile-link">Detox Levels</a>
       <a href="#nervous-system" class="nav__mobile-link">Islands by Nervous System</a>
       <a href="#protocol" class="nav__mobile-link">The Protocol</a>
+      <a href="#quiz" class="nav__mobile-link">Find Your Island</a>
       <a href="#reset" class="nav__mobile-link">3-Day Reset</a>
       <a href="#no-influencer" class="nav__mobile-link">No-Influencer List</a>
       <a href="#faq" class="nav__mobile-link">FAQ</a>
@@ -212,6 +214,7 @@
         >
       </div>
       <div class="hero__overlay"></div>
+      <div class="hero__noise" aria-hidden="true"></div>
 
       <!-- Ocean particles -->
       <div class="ocean-particles" aria-hidden="true">
@@ -227,7 +230,7 @@
 
       <div class="hero__content">
         <span class="hero__badge">Detox from the internet, not your body</span>
-        <h1 class="hero__title">Leave the noise.<br><em>Return to yourself.</em></h1>
+        <h1 class="hero__title">Leave the noise.<br><em class="hero__rotate"><span class="hero__rotate-word hero__rotate-word--active">Return to yourself.</span><span class="hero__rotate-word">Find your island.</span><span class="hero__rotate-word">Remember who you are.</span><span class="hero__rotate-word">Hear the ocean again.</span></em></h1>
         <p class="hero__subtitle">
           IslandDetox is the world's first travel platform for digital detox islands.
           Phone-free retreats. Quiet island vacations. Burnout recovery trips.
@@ -251,6 +254,37 @@
         <path d="M0,40 C240,80 480,0 720,40 C960,80 1200,0 1440,40 L1440,80 L0,80 Z" fill="#0b1d35"/>
       </svg>
     </div>
+
+    <!-- ============ SCREEN TIME AWARENESS ============ -->
+    <section class="screen-time" aria-label="Screen Time Awareness">
+      <div class="container container--narrow" style="text-align: center;">
+        <span class="section__label reveal">The Problem</span>
+        <h2 class="section__title reveal">Right Now, You've Likely Spent</h2>
+        <div class="screen-time__display reveal">
+          <span class="screen-time__number" id="screenTimeHours">0</span>
+          <span class="screen-time__unit">hours</span>
+        </div>
+        <p class="screen-time__context reveal">
+          on screens today. The average person spends <strong>7+ hours daily</strong> staring at pixels.
+          Your nervous system is begging for something real.
+        </p>
+        <div class="screen-time__visual reveal" aria-hidden="true">
+          <div class="screen-time__day">
+            <div class="screen-time__fill" id="screenTimeFill"></div>
+            <span class="screen-time__marker" id="screenTimeMarker">You are here</span>
+          </div>
+          <div class="screen-time__labels">
+            <span>6 AM</span>
+            <span>Noon</span>
+            <span>6 PM</span>
+            <span>Midnight</span>
+          </div>
+        </div>
+        <p class="screen-time__cta reveal">
+          What if you traded just 72 hours of this for ocean, wind, and silence?
+        </p>
+      </div>
+    </section>
 
     <!-- ============ ISLAND MAP NAVIGATOR ============ -->
     <section id="map" class="island-map section" aria-label="Island Map Navigator">
@@ -644,6 +678,84 @@
       </div>
     </section>
 
+    <!-- ============ ISLAND FINDER QUIZ ============ -->
+    <section id="quiz" class="section quiz" aria-labelledby="quiz-title">
+      <div class="container container--narrow">
+        <span class="section__label reveal" style="text-align:center; display:block;">Find Your Island</span>
+        <h2 id="quiz-title" class="section__title reveal" style="text-align:center;">Which Island Type Matches You?</h2>
+        <p class="section__subtitle reveal" style="text-align:center; margin:0 auto;">
+          Answer 4 quick questions. We'll match you with your ideal island nervous system type and detox level.
+        </p>
+
+        <div class="quiz__card reveal" id="quizCard">
+          <div class="quiz__progress">
+            <div class="quiz__progress-fill" id="quizProgress"></div>
+          </div>
+
+          <!-- Question 1 -->
+          <div class="quiz__step quiz__step--active" data-step="1">
+            <span class="quiz__step-count">1 of 4</span>
+            <h3 class="quiz__question">How do you feel right now?</h3>
+            <div class="quiz__options">
+              <button class="quiz__option" data-value="gentle">Tired but functional</button>
+              <button class="quiz__option" data-value="healing">Emotionally drained</button>
+              <button class="quiz__option" data-value="wild">Restless and frustrated</button>
+              <button class="quiz__option" data-value="lonely">Overwhelmed by people</button>
+              <button class="quiz__option" data-value="social">Fine, just need a break</button>
+            </div>
+          </div>
+
+          <!-- Question 2 -->
+          <div class="quiz__step" data-step="2">
+            <span class="quiz__step-count">2 of 4</span>
+            <h3 class="quiz__question">How much time can you take off?</h3>
+            <div class="quiz__options">
+              <button class="quiz__option" data-value="3">A long weekend (3 days)</button>
+              <button class="quiz__option" data-value="5">About 5 days</button>
+              <button class="quiz__option" data-value="7">A full week</button>
+              <button class="quiz__option" data-value="14">Two weeks or more</button>
+            </div>
+          </div>
+
+          <!-- Question 3 -->
+          <div class="quiz__step" data-step="3">
+            <span class="quiz__step-count">3 of 4</span>
+            <h3 class="quiz__question">What do you need most?</h3>
+            <div class="quiz__options">
+              <button class="quiz__option" data-value="sleep">Deep, uninterrupted sleep</button>
+              <button class="quiz__option" data-value="nature">Raw nature and open space</button>
+              <button class="quiz__option" data-value="silence">Complete silence and solitude</button>
+              <button class="quiz__option" data-value="ease">Warmth, calm, and simplicity</button>
+            </div>
+          </div>
+
+          <!-- Question 4 -->
+          <div class="quiz__step" data-step="4">
+            <span class="quiz__step-count">4 of 4</span>
+            <h3 class="quiz__question">How adventurous are you feeling?</h3>
+            <div class="quiz__options">
+              <button class="quiz__option" data-value="1">Keep it gentle and safe</button>
+              <button class="quiz__option" data-value="2">A little outside my comfort zone</button>
+              <button class="quiz__option" data-value="3">Push me somewhere remote</button>
+              <button class="quiz__option" data-value="4">Take me off the grid entirely</button>
+            </div>
+          </div>
+
+          <!-- Result -->
+          <div class="quiz__result" id="quizResult">
+            <span class="quiz__result-label">Your Island Match</span>
+            <h3 class="quiz__result-type" id="quizResultType"></h3>
+            <p class="quiz__result-level" id="quizResultLevel"></p>
+            <p class="quiz__result-desc" id="quizResultDesc"></p>
+            <div class="quiz__result-actions">
+              <a href="#nervous-system" class="btn btn--primary">Explore Your Match</a>
+              <button class="btn btn--secondary quiz__restart" id="quizRestart">Retake Quiz</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- ============ NO-INFLUENCER ISLANDS ============ -->
     <section id="no-influencer" class="section no-influencer" aria-labelledby="ni-title">
       <div class="container">
@@ -916,6 +1028,49 @@
       </div>
     </section>
 
+    <!-- ============ BEFORE & AFTER ============ -->
+    <section class="section contrast" aria-labelledby="contrast-title">
+      <div class="container">
+        <span class="section__label reveal" style="text-align:center; display:block;">The Shift</span>
+        <h2 id="contrast-title" class="section__title reveal" style="text-align:center;">Before the Island. After the Island.</h2>
+        <p class="section__subtitle reveal" style="text-align:center; margin:0 auto;">
+          This isn't about luxury. It's about what happens when you remove the noise and give your nervous system permission to rest.
+        </p>
+
+        <div class="contrast__grid reveal">
+          <div class="contrast__panel contrast__panel--before">
+            <h3 class="contrast__panel-title">Before</h3>
+            <ul class="contrast__list">
+              <li>Wake up. Check phone. 47 notifications.</li>
+              <li>Scroll through news that makes you anxious</li>
+              <li>Open laptop. 112 unread emails.</li>
+              <li>Eat lunch while watching something</li>
+              <li>Compare yourself to strangers online</li>
+              <li>Fall asleep to a screen. Dream about work.</li>
+              <li>Repeat. Wonder why you're tired.</li>
+            </ul>
+          </div>
+          <div class="contrast__divider" aria-hidden="true">
+            <span class="contrast__divider-line"></span>
+            <span class="contrast__divider-icon">&#9875;</span>
+            <span class="contrast__divider-line"></span>
+          </div>
+          <div class="contrast__panel contrast__panel--after">
+            <h3 class="contrast__panel-title">After</h3>
+            <ul class="contrast__list">
+              <li>Wake up to birdsong. No phone.</li>
+              <li>Walk to the water. Watch the tide.</li>
+              <li>Eat breakfast tasting every bite</li>
+              <li>Read a book. The whole book.</li>
+              <li>Swim. Nap. Write in a journal.</li>
+              <li>Fall asleep to waves. Dream about nothing.</li>
+              <li>Wake up and realize: this is enough.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- ============ VERIFIED STAYS ============ -->
     <section id="verified" class="section verified" aria-labelledby="verified-title">
       <div class="container">
@@ -985,6 +1140,61 @@
       </div>
     </section>
 
+    <!-- ============ TRAVELER STORIES ============ -->
+    <section class="section stories" aria-labelledby="stories-title">
+      <div class="container">
+        <span class="section__label reveal">Real Stories</span>
+        <h2 id="stories-title" class="section__title reveal">What Happens When You Unplug</h2>
+        <p class="section__subtitle reveal">
+          These aren't influencer testimonials. They're honest accounts from people who left their screens behind and came back different.
+        </p>
+
+        <div class="stories__grid">
+          <div class="story-card reveal reveal--delay-1">
+            <div class="story-card__quote">
+              &ldquo;I went to Jura for 5 days. No phone, no laptop. On Day 3 I cried for no reason. On Day 4 I had the first creative idea I'd had in two years. I'm a different founder now.&rdquo;
+            </div>
+            <div class="story-card__author">
+              <div class="story-card__avatar" aria-hidden="true">M</div>
+              <div>
+                <div class="story-card__name">Marcus, 34</div>
+                <div class="story-card__detail">Startup founder &middot; Jura, Scotland &middot; Level 4</div>
+              </div>
+            </div>
+            <div class="story-card__tag">Burnout Recovery</div>
+          </div>
+
+          <div class="story-card reveal reveal--delay-2">
+            <div class="story-card__quote">
+              &ldquo;After my divorce I was doomscrolling 6 hours a day. My therapist said 'go somewhere without Wi-Fi.' I found Inis Me&aacute;in through IslandDetox. Three days of walking, sleeping, and staring at the Atlantic. I deleted Instagram when I got home.&rdquo;
+            </div>
+            <div class="story-card__author">
+              <div class="story-card__avatar" aria-hidden="true">S</div>
+              <div>
+                <div class="story-card__name">Sarah, 41</div>
+                <div class="story-card__detail">Teacher &middot; Inis Me&aacute;in, Ireland &middot; Level 3</div>
+              </div>
+            </div>
+            <div class="story-card__tag">After a Breakup</div>
+          </div>
+
+          <div class="story-card reveal reveal--delay-3">
+            <div class="story-card__quote">
+              &ldquo;I'm autistic and most 'wellness retreats' are sensory nightmares for me. Sark was perfect. No cars. No crowds. No expectations. Just paths, cliffs, and ocean. I slept 10 hours every night. My nervous system has never been this calm.&rdquo;
+            </div>
+            <div class="story-card__author">
+              <div class="story-card__avatar" aria-hidden="true">K</div>
+              <div>
+                <div class="story-card__name">Kai, 28</div>
+                <div class="story-card__detail">Designer &middot; Sark, Channel Islands &middot; Level 4</div>
+              </div>
+            </div>
+            <div class="story-card__tag">Neurodiverse</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- ============ RE-ENTRY PLAN ============ -->
     <section id="reentry" class="section reentry" aria-labelledby="reentry-title">
       <div class="container">
@@ -1034,6 +1244,31 @@
 
         <div style="margin-top: var(--space-xl); text-align: center;" class="reveal">
           <a href="coming-soon.html" class="btn btn--secondary">Get the Full Re-Entry Guide</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ IMPACT STATS ============ -->
+    <section class="section stats" aria-label="Impact Statistics">
+      <div class="stats__bg" aria-hidden="true"></div>
+      <div class="container">
+        <div class="stats__grid">
+          <div class="stat reveal reveal--delay-1">
+            <span class="stat__number" data-target="150">0</span>
+            <span class="stat__label">Islands Curated</span>
+          </div>
+          <div class="stat reveal reveal--delay-2">
+            <span class="stat__number" data-target="38">0</span>
+            <span class="stat__label">Countries</span>
+          </div>
+          <div class="stat reveal reveal--delay-3">
+            <span class="stat__number" data-target="52">0</span>
+            <span class="stat__label">Verified Stays</span>
+          </div>
+          <div class="stat reveal reveal--delay-4">
+            <span class="stat__number" data-target="10000" data-suffix="+">0</span>
+            <span class="stat__label">Quiet Seekers</span>
+          </div>
         </div>
       </div>
     </section>
@@ -1269,7 +1504,7 @@
       </div>
 
       <div class="footer__bottom">
-        <span class="footer__copy">&copy; 2025 IslandDetox.com. All rights reserved. Offline is the luxury.</span>
+        <span class="footer__copy">&copy; 2026 IslandDetox.com. All rights reserved. Offline is the luxury.</span>
         <div class="footer__bottom-links">
           <a href="coming-soon.html" class="footer__bottom-link">Privacy</a>
           <a href="coming-soon.html" class="footer__bottom-link">Terms</a>
