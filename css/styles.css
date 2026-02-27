@@ -2494,3 +2494,424 @@ button {
   color: var(--sea-foam);
   opacity: 0.8;
 }
+
+/* ==========================================================================
+   INNER PAGES — Island, Country, Verified Stay Templates
+   ========================================================================== */
+
+/* ---------- Inner Page Hero ---------- */
+.page-hero {
+  position: relative;
+  min-height: 55vh;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+  background: var(--ocean-deep);
+}
+
+.page-hero__bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.page-hero__bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.5;
+}
+
+.page-hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(11,29,53,0.2) 0%, rgba(11,29,53,0.8) 100%);
+  z-index: 1;
+}
+
+.page-hero__content {
+  position: relative;
+  z-index: 2;
+  padding: var(--space-2xl) var(--space-md) var(--space-xl);
+  max-width: var(--max-width);
+  margin: 0 auto;
+  width: 100%;
+}
+
+.page-hero__breadcrumb {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--sea-foam);
+  margin-bottom: var(--space-sm);
+}
+
+.page-hero__breadcrumb a {
+  color: var(--sea-foam);
+  text-decoration: none;
+  opacity: 0.7;
+  transition: opacity var(--transition-fast);
+}
+
+.page-hero__breadcrumb a:hover {
+  opacity: 1;
+  color: var(--sea-foam);
+}
+
+.page-hero__title {
+  font-size: var(--text-4xl);
+  color: var(--white);
+  margin-bottom: 0.2em;
+}
+
+.page-hero__subtitle {
+  font-size: var(--text-lg);
+  color: rgba(255,255,255,0.7);
+  max-width: 55ch;
+}
+
+.page-hero__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em;
+  margin-top: var(--space-md);
+}
+
+.page-hero__tag {
+  display: inline-block;
+  padding: 0.3em 0.9em;
+  border-radius: 100px;
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: 0.05em;
+  background: rgba(255,255,255,0.12);
+  color: var(--sea-foam);
+  border: 1px solid rgba(255,255,255,0.15);
+}
+
+/* ---------- Inner Page Layout ---------- */
+.page-body {
+  padding: var(--space-2xl) 0;
+}
+
+.page-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-2xl);
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--space-md);
+}
+
+.page-main {
+  min-width: 0;
+}
+
+.page-main h2 {
+  font-size: var(--text-2xl);
+  margin-bottom: var(--space-md);
+  margin-top: var(--space-xl);
+}
+
+.page-main h2:first-child {
+  margin-top: 0;
+}
+
+.page-main p {
+  color: var(--text-secondary);
+  margin-bottom: 1.2em;
+  line-height: 1.8;
+}
+
+/* ---------- Quick Facts Sidebar ---------- */
+.quick-facts {
+  background: var(--sand);
+  border-radius: var(--border-radius-lg);
+  padding: var(--space-lg);
+  height: fit-content;
+  position: sticky;
+  top: 100px;
+}
+
+.quick-facts__title {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--coral);
+  margin-bottom: var(--space-md);
+  font-weight: 700;
+}
+
+.quick-facts__list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.quick-facts__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: var(--space-sm);
+  padding-bottom: var(--space-sm);
+  border-bottom: 1px solid var(--sand-dark);
+  font-size: var(--text-sm);
+}
+
+.quick-facts__item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.quick-facts__label {
+  color: var(--text-muted);
+  flex-shrink: 0;
+}
+
+.quick-facts__value {
+  color: var(--text-primary);
+  font-weight: 600;
+  text-align: right;
+}
+
+.quick-facts__cta {
+  margin-top: var(--space-lg);
+}
+
+/* ---------- Island Index Inline ---------- */
+.page-index {
+  background: var(--ocean-mid);
+  border-radius: var(--border-radius-lg);
+  padding: var(--space-lg);
+  margin-top: var(--space-xl);
+}
+
+.page-index__title {
+  font-family: var(--font-heading);
+  font-size: var(--text-xl);
+  color: var(--white);
+  margin-bottom: var(--space-md);
+}
+
+.page-index__scores {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.page-index__row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.page-index__label {
+  font-size: var(--text-sm);
+  color: rgba(255,255,255,0.7);
+  width: 130px;
+  flex-shrink: 0;
+}
+
+.page-index__bar {
+  flex: 1;
+  height: 8px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.page-index__fill {
+  height: 100%;
+  border-radius: 4px;
+  background: var(--sea-foam);
+}
+
+.page-index__val {
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  color: var(--sea-foam);
+  width: 3em;
+  text-align: right;
+}
+
+/* ---------- Related Cards Grid ---------- */
+.related {
+  padding: var(--space-3xl) 0;
+  background: var(--sand);
+}
+
+.related__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-md);
+  margin-top: var(--space-xl);
+  max-width: var(--max-width);
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 var(--space-md);
+}
+
+.related-card {
+  background: var(--white);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  transition: all var(--transition-base);
+  border: 1px solid var(--sand-dark);
+}
+
+.related-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  color: inherit;
+}
+
+.related-card__img {
+  aspect-ratio: 16/10;
+  overflow: hidden;
+}
+
+.related-card__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+.related-card:hover .related-card__img img {
+  transform: scale(1.05);
+}
+
+.related-card__body {
+  padding: var(--space-md);
+}
+
+.related-card__location {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+  margin-bottom: 0.2em;
+}
+
+.related-card__name {
+  font-family: var(--font-heading);
+  font-size: var(--text-lg);
+  margin-bottom: 0.2em;
+}
+
+.related-card__meta {
+  font-size: var(--text-xs);
+  color: var(--text-muted);
+}
+
+/* ---------- Country: Island Grid ---------- */
+.country-islands__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-md);
+  margin-top: var(--space-xl);
+}
+
+/* ---------- Verified Badge ---------- */
+.verified-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4em;
+  padding: 0.3em 0.9em;
+  border-radius: 100px;
+  background: var(--leaf);
+  color: var(--white);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 600;
+}
+
+/* ---------- Verified Stays Checklist (inner page) ---------- */
+.stay-checklist {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-sm);
+  margin-top: var(--space-md);
+}
+
+.stay-checklist__item {
+  display: flex;
+  align-items: center;
+  gap: 0.6em;
+  font-size: var(--text-sm);
+}
+
+.stay-checklist__icon {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--leaf);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  font-size: 0.6em;
+  flex-shrink: 0;
+}
+
+.stay-checklist__icon--no {
+  background: var(--sand-dark);
+  color: var(--text-muted);
+}
+
+/* ---------- Inner Page CTA ---------- */
+.page-cta {
+  background: var(--ocean-deep);
+  text-align: center;
+  padding: var(--space-3xl) var(--space-md);
+  position: relative;
+}
+
+.page-cta__title {
+  font-size: var(--text-3xl);
+  color: var(--white);
+  margin-bottom: var(--space-sm);
+}
+
+.page-cta__desc {
+  font-size: var(--text-base);
+  color: var(--sea-foam);
+  max-width: 50ch;
+  margin: 0 auto var(--space-lg);
+}
+
+/* ---------- Inner Page Responsive ---------- */
+@media (min-width: 640px) {
+  .related__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .country-islands__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .stay-checklist {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 960px) {
+  .page-layout {
+    grid-template-columns: 1fr 320px;
+  }
+
+  .related__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .country-islands__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
